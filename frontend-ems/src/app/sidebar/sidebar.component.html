@@ -1,0 +1,22 @@
+<div class="sidebar" appToggle>
+  <ul class="nav-links">
+    <li *ngIf="role!='EMPLOYEE'">
+      <a routerLink="/home-page/add-employee">
+        <i class="fa fa-solid fa-user-plus"></i>
+        <span class="link_name">Add Employee</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/home-page/employee-list">
+        <i class="fa fa-solid fa-clipboard"></i>
+        <span class="link_name">Employee List</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/home-page/personal-details">
+        <i class='fa fa-user'></i>
+        <span class="link_name">Personal Details</span>
+      </a>
+    </li>
+  </ul>
+</div>

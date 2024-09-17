@@ -1,0 +1,41 @@
+<section class="vh-100">
+    <div class="container-fluid h-custom">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-9 col-lg-6 col-xl-5">
+            <img class="login-image" src="/assets/images/signin-image.jpeg" alt="">
+        </div>
+        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+          <form #loginForm="ngForm" [formGroup]="login" (ngSubmit)="onSubmit()">
+            <h2 style="margin-bottom: 20px;">LogIn</h2>
+
+            <div class="form-outline mb-4">
+              <input type="email" formControlName="email" id="email" class="form-control form-control-lg"
+                placeholder="Enter a valid email address" required email/>
+              <label class="form-label" for="email" *ngIf="!login.controls['email'].touched">Email address</label>
+              <span class="help-block text-danger" *ngIf="!login.controls['email'].valid && login.controls['email'].touched">Please enter a valid email!</span>
+            </div>
+   
+            <div class="form-outline mb-3">
+              <input type="password" formControlName="password" id="password" class="form-control form-control-lg"
+                placeholder="Enter password" required minlength="1"/>
+              <label class="form-label" for="password" *ngIf="!login.controls['password'].touched">Password</label>
+            </div>
+  
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="form-check mb-0">
+                <input class="form-check-input me-2" type="checkbox" id="checkbox" [ngModel]="rememberMe" (change)="rememberMe = !rememberMe" name="rememberMe">
+                <label class="form-check-label" for="checkbox">
+                  Remember me
+                </label>
+              </div>
+            </div>
+            <div class="text-center text-lg-start mt-4 pt-2">
+              <button type="submit" class="btn btn-primary btn-lg"
+                style="padding-left: 2.5rem; padding-right: 2.5rem;" [disabled]="!loginForm.valid">Login</button>
+            </div>
+            <div style="color : red" *ngIf='error'>{{error}}</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,115 @@
+<section style="background-color: #F9FDFF;">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="card mb-4">
+            <div class="card-body text-center">
+              <img id="profileImage" [src]="profilePic" alt="Image" class="rounded-circle img-fluid" style="height:140px; width: 140px;" *ngIf=profilePic>
+              <div *ngIf="profilePic==null">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar" *ngIf="employee.gender=='Male'" class="rounded-circle img-fluid" style="width: 150px;">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava2.webp" alt="avatar" *ngIf="employee.gender=='Female'" class="rounded-circle img-fluid" style="width: 150px;">
+              </div>
+              <h5 class="my-3">{{employee.firstName}} {{employee.lastName}}</h5>
+              <p class="text-capitalize text-muted mb-1 bold">{{employee.role}}</p>
+              <div class="d-flex justify-content-center mb-2 mt-3">
+                <button type="button" class="btn btn-outline-warning" (click)="updateImage()">Update Image</button>
+                <button type="button" class="btn btn-outline-primary update" (click)="updateEmployee(employee.id)" style="margin-left: 10px;" >Update</button>
+              </div>
+            </div>
+          </div>
+          <div class="alert alert-warning alert-dismissible fade show" *ngIf="showAlert" role="alert">
+            <div class="form-inline" style="margin-top: 15px; justify-content: center; text-align: center;">
+              <input class="form-control" type="file" (change)="onChange($event)">
+              <button type="button" class="close" style="float: right; margin-bottom: 10px;" (click)="closeAlert()">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <p *ngIf="showMessage">Showing preview image</p>
+            <div class="form-inline" style="margin-top: 15px; justify-content: center; text-align: center;">
+              <button (click)="onUpload()" class="btn btn-outline-success">Upload</button>
+            </div>
+          </div>                 
+        </div>
+        <div class="col-lg-8">
+          <div class="card mb-4">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Full Name</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0">{{employee.firstName}} {{employee.lastName}}</p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Email</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0">{{employee.email}}</p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Phone</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0">{{employee.contact.number}}</p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Date of Birth</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0">{{employee.dob}}</p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Gender</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-uppercase text-muted mb-0">{{employee.gender}}</p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Blood Group</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0">{{employee.bloodGroup}}</p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Martial Status</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0">{{employee.martialStatus}}</p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Address</p>
+                </div>
+                <div class="text-capitalize col-sm-9">
+                  <p class="text-muted mb-0">{{employee.address.addressLine1}} {{employee.address.addressLine2}}</p>
+                  <p class="text-muted mb-0">{{employee.address.pincode}}, {{employee.address.city}} {{employee.address.state}}.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-outline-primary update" (click)="updatePassword()">Update password</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  

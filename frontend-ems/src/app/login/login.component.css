@@ -1,0 +1,53 @@
+.divider:after,
+.divider:before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eee;
+}
+
+.h-custom {
+    height: calc(100% - 73px);
+}
+
+form {
+    padding: 40px;
+    background-color: white;
+    margin: auto;
+    margin-top: 100px;
+    width: 400px;
+    font-size: 18px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, .4);
+    min-height: 100px;
+}
+
+h2{
+    text-align: center;
+    /* margin-bottom: 10px; */
+}
+.login-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Media queries to change the size of the image */
+  @media (max-width: 767px) {
+    .login-image {
+      display: none;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 991px) {
+    .login-image {
+      max-width: 300px;
+      max-height: 300px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .login-image {
+      max-width: 400px;
+      max-height: 400px;
+    }
+  }

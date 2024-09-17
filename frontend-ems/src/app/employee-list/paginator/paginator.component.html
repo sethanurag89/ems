@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-12">
+      <div class="p-3 d-flex justify-content-end">
+          <span  class="mx-3">
+              <span style="font-size: 20px;">Page Size:</span>
+              <input [(ngModel)]="pageSizeTemp" (keyup.enter)="valueChange()" type="text" class="input mx-2" style="width:30px;height:50%;text-align: center;" />
+          </span>
+          <span  class="btn" (click)="onDecrease()"> <i class=" fa fa-solid fa-arrow-left"></i></span>
+          <span  class="mx-3">
+             <input type="text" [(ngModel)]="currentPage" (keyup.enter) ="onEntry()" class="input mx-2" style="width:30px;height:50%;text-align: center;" />
+             <span  style="font-size: 20px;" >of {{totalPages}}</span>
+          </span>
+          <span  class="btn" (click)="onIncrease()"> <i class=" fa fa-solid fa-arrow-right"></i></span>
+      </div>
+    </div>
+  </div>

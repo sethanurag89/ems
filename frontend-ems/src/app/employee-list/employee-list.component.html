@@ -1,0 +1,40 @@
+<section style="background-color: #F9FDFF;">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-lg-8">
+        <h2 class="mb-3">All Employees:</h2>
+      </div>
+      <div class="col-lg-4 search-bar">
+        <input type="text" [(ngModel)]="search" placeholder="Search Employee..." class="form-control mb-3">
+      </div>
+    </div>
+    <div class="col mb-3" *ngFor="let employee of sliceList;">
+      <div class="card" *ngIf="role!='EMPLOYEE' || employee.active==true"
+        [ngStyle]="{backgroundColor: employee.active==true?'#D5f5E3':'#FADBD8'}">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-lg-2">
+              <img [src]="getProfilePic(employee.email, employee.gender)" alt="Image" class="rounded-circle img-fluid"
+                style="width: 75px; height: 75px;">
+            </div>
+            <div class="col-lg-4">
+              <p class="mb-1">Name: {{employee.firstName}} {{employee.lastName}}</p>
+              <p class="mb-1">Employee Id: {{employee.empId}}</p>
+              <p class="mb-1">Role: {{employee.role.slice(5)}}</p>
+            </div>
+            <div class="col-lg-4">
+              <p class="mb-1">Email: {{employee.email}}</p>
+              <p class="mb-1">Contact: {{employee.contact.number}}</p>
+            </div>
+            <div class="col-lg-2" style="padding: 20px;">
+              <button class="btn btn-outline-primary" (click)="showFullDetails(employee.id)"
+                *ngIf="role!='EMPLOYEE'">Full Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-paginator *ngIf="totalSize" (change)="onChange($event)" [totalSize]="totalSize"
+      [pageSize]="pageSize"></app-paginator>
+  </div>
+</section>

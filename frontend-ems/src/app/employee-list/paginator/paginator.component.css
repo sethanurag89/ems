@@ -1,0 +1,15 @@
+span{
+    font-size: 34px;
+}
+input[type="text"]
+{
+    font-size:18px;
+}
+
+.btn{
+    color: #7da1c7;
+}
+
+.btn:hover{
+    color: #2a4058;
+}
