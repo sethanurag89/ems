@@ -1,0 +1,107 @@
+[
+    {
+        "id": 1,
+        "empId": 1,
+        "firstName": "Anuj",
+        "lastName": "Seth",
+        "email": "anujseth@argusoft.com",
+        "password": "$2a$10$ZszXA6wde3SbTmpdc4BxeemY70JphwyxFAGG5Y5IkX5nWi.c/kDxy",
+        "role": "ROLE_EMPLOYEE",
+        "address": {
+            "id": 1,
+            "addressLine1": "28,subhash ganj, jhansi",
+            "addressLine2": " Near Rani mahal",
+            "city": "jhansi",
+            "state": "uttar pradesh",
+            "pincode": "284001",
+            "createdOn": "2023-05-18T14:55:40.591993",
+            "updatedOn": "2023-05-18T14:55:40.592027"
+        },
+        "contact": {
+            "id": 1,
+            "contactType": "personal",
+            "number": "8005326946",
+            "active": true,
+            "createdOn": "2023-05-18T14:55:30.580703",
+            "updatedOn": "2023-05-18T14:55:30.581128"
+        },
+        "bloodGroup": "AB+",
+        "gender": "Male",
+        "active": true,
+        "martialStatus": "Bachelor",
+        "dob": "25-07-2002",
+        "createdOn": "2023-05-18T14:56:21.342782",
+        "updatedOn": "2023-05-18T17:13:22.668442",
+        "createdBy": 1
+    },
+    {
+        "id": 2,
+        "empId": 2,
+        "firstName": "Anurag",
+        "lastName": "Seth",
+        "email": "anuragseth@argusoft.com",
+        "password": "$2a$10$uEhUFPHcS2DOb.FjbanKaOSYfqstVputcdhA3.7vUqm.G//ConRr.",
+        "role": "ROLE_ADMIN",
+        "address": {
+            "id": 2,
+            "addressLine1": "372/81,shaktinagar colony, behind",
+            "addressLine2": "V-mart, near narendra vaidh",
+            "city": "jhansi",
+            "state": "uttar pradesh",
+            "pincode": "284002",
+            "createdOn": "2023-05-18T14:57:26.084802",
+            "updatedOn": "2023-05-18T14:57:26.084844"
+        },
+        "contact": {
+            "id": 2,
+            "contactType": "personal",
+            "number": "9956122575",
+            "active": true,
+            "createdOn": "2023-05-18T14:56:42.845551",
+            "updatedOn": "2023-05-18T14:56:42.845598"
+        },
+        "bloodGroup": "B+",
+        "gender": "Male",
+        "active": true,
+        "martialStatus": "Bachelor",
+        "dob": "25-07-2001",
+        "createdOn": "2023-05-18T14:58:04.065657",
+        "updatedOn": "2023-05-18T17:12:16.217514",
+        "createdBy": 1
+    },
+    {
+        "id": 3,
+        "empId": 3,
+        "firstName": "Shreya",
+        "lastName": "Jain",
+        "email": "shreyajain@argusoft.com",
+        "password": "$2a$10$TCEju5Pf0gkSwtXXs/1lfe6Ctq3DF.UtBUJtOu79XpG6Y9syFRxku",
+        "role": "ROLE_SUPER-ADMIN",
+        "address": {
+            "id": 3,
+            "addressLine1": "372/81,shaktinagar colony, behind",
+            "addressLine2": "V-mart, near narendra vaidh",
+            "city": "jhansi",
+            "state": "uttar pradesh",
+            "pincode": "284003",
+            "createdOn": "2023-05-18T14:58:39.729489",
+            "updatedOn": "2023-05-18T14:58:39.729531"
+        },
+        "contact": {
+            "id": 3,
+            "contactType": "personal",
+            "number": "6266404669",
+            "active": true,
+            "createdOn": "2023-05-18T14:58:24.195109",
+            "updatedOn": "2023-05-18T14:58:24.195149"
+        },
+        "bloodGroup": "O+",
+        "gender": "Female",
+        "active": true,
+        "martialStatus": "Bachelor",
+        "dob": "02-02-2001",
+        "createdOn": "2023-05-18T14:59:35.608499",
+        "updatedOn": "2023-05-18T17:11:16.734892",
+        "createdBy": 1
+    }
+]
